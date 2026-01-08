@@ -4,13 +4,17 @@
 <head></head>
 
 <body>
-    <button onclick="myfunction(5)">Execute the JS function</button>
+    <P>A function can access variables defined inside the function:</P>
+    <button type="button" onclick="myfunction()">Click Me!</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
     <script>
-        function myfunction(x, y) {
-            if (y == undefined) {
-                y = 2;
-            }
-            document.write(x * y);
+        var b = 5;
+        function myfunction() {
+            //Local variable
+            var a = 4;
+            document.getElementById("demo").innerHTML = "b * a = " + (b * a);
+            document.getElementById("demo1").innerHTML = "Local a = " + a + "Global b = " + b;
         }
     </script>
 </body>
